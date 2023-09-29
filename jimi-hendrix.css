@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "bungee Shade";
+    src: url(typsnitt/Bungee_Shade/BungeeShade-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bungee Outline";
+    src: url(typsnitt/Bungee_Outline/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+    font-family: "barlow semi condensed";
+    src: url(typsnitt/Barlow_Semi_Condensed/BarlowSemiCondensed-Light.ttf);
+}
+
+@font-face {
+    font-family: "barlow condensed";
+    src: url(typsnitt/Barlow_Condensed/BarlowCondensed-Bold.ttf);
+}
+
+* {
+    color: rgb(233, 230, 230);
+    font-family: "barlow semi condensed";
+    margin: 0;
+}
+
+body {
+    background-image: url(images/jimi-hendrix.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    min-width: 800px;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 9vh 9vw;
+    width: 80vw;
+}
+
+.container h1 {
+    font-family: "bungee Shade";
+    font-size: 83px;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+
+    list-style-type: none;
+    padding: 60px 0;
+}
+
+nav li {
+    background-color: rgba(255, 255, 255, 0.622);
+    color: black;
+    text-align: center;
+    font-size: 26px;
+
+
+    border-radius: 10px;
+    padding: 15px 0;
+}
+
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+#pressed {
+    border: 1px solid white;
+    font-family: "barlow condensed";
+}
+
+.album
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.4);
+    border: lightgray solid 1px;
+    border-radius: 15px;
+    padding: 20px;
+}
