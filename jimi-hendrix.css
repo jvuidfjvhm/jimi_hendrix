@@ -38,16 +38,24 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
-    min-width: 800px;
-    height: 100vh;
+    /*kolla denna*/
+    min-height: 100vh; 
+}
+
+@media screen and (max-width: 500px) {
+    .container h1 {
+        max-width: 100%; 
+        text-align: center;
+    }
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: rgba(0, 0, 0, 0.35);
     border-radius: 15px;
     padding: 20px;
-    margin: 9vh 9vw;
+    /*detta?*/
+    margin: 10vh auto;
+    min-width: 800px;
     width: 80vw;
 }
 
@@ -101,22 +109,44 @@ article {
 
     display: flex;
     justify-content: flex-end;
+    gap: 1vh;
 }
 
-.album {
+aside {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto 1fr;
-    gap: 1vh;
-
+    gap: 2vh;
     padding-bottom: 1vh;
     width: 40vw;
+
+    position: relative;
 }
 
-.album img {
+aside img {
     width: 100%;
     height: auto;
     border-radius: 15px 15px 0 0;
+
+    transition: opacity 1s;
+}
+
+aside img:nth-child(2) {
+    position: absolute;
+    width: 29vw;
+    right: 0vw;
+
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+aside:hover img:nth-child(1) {
+    opacity: 0;
+}
+
+aside:hover img:nth-child(2) {
+    opacity: 1;
 }
 
 figure {
@@ -124,7 +154,7 @@ figure {
     grid-column: 1 / span 2;
 }
 
-.side {
+figcaption {
     color:rgb(209, 97, 157);
     background-color: rgb(236, 215, 50);
     border-radius: 0 0 0 15px;
@@ -132,7 +162,7 @@ figure {
     font-size: 14px;
 }
 
-#side2 {
+aside figcaption + figcaption {
     border-radius: 0 0 15px 0;
 }
 
@@ -176,7 +206,8 @@ content {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 1vw;
+    margin-top: 1vw;
     height: 25vh;
 }
 
@@ -202,9 +233,13 @@ content div:nth-child(4) {
     background-image: url(images/chas_chandler.jpeg);
     background-position: center;
     background-size: cover;
-    color: white;
+
+    font-family: "barlow condensed light";
+    font-size: 18px;
+    color: rgb(214, 214, 214);
     padding: 1vw;
     border-radius: 0 1vh 1vh 1vh;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 
     display: flex;
     align-items: end;
@@ -213,4 +248,63 @@ content div:nth-child(4) {
 
 content div:nth-child(5) {
     border-radius: 1vh 1vh 0 1vh;
+}
+
+.blue {
+    background-color: rgb(72, 189, 215);
+    color: wheat;
+}
+
+.wheat {
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+}
+
+.wheat > div{
+    background-color: wheat;
+    color: rgb(72, 189, 215);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wheat div:nth-child(1) {
+    border-radius: 10px 10px 10px 0;
+}
+
+.wheat div:nth-child(2) {
+    border-radius: 0 10px 10px 10px;
+}
+
+.wheat div:nth-child(3) {
+    background-image: url(images/eddie_kramer.jpeg);
+    background-position: center;
+    background-size: cover;
+    
+    color: rgb(214, 214, 214);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-family: "barlow condensed light";
+    font-size: 18px;
+    padding: 2vh;
+    border-radius: 0 10px 10px 10px;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.wheat div:nth-child(4) {
+    background-image: none;
+    text-shadow: none;
+    color:  rgb(72, 189, 215);
+    border-radius: 10px 10px 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    color: white;
+    margin-top: 8vh;
 }
