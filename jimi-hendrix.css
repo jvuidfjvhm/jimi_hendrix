@@ -31,58 +31,57 @@
 * {
     font-family: "barlow semi condensed";
     margin: 0;
-}
-
-body {
+  }
+  
+  body {
     background-image: url(images/jimi-hendrix.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /*kolla denna*/
-    min-height: 100vh; 
-}
-
-@media screen and (max-width: 500px) {
-    .container h1 {
-        max-width: 100%; 
-        text-align: center;
+    
+    margin: 5vw auto; 
+    padding: 0 2vw;
+    box-sizing: border-box;
+    max-width: 1200px; 
+  }
+  
+  @media (min-width: 800px) and (max-width: 900px) {
+    
+    body {
+      max-width: 800px;
     }
-}
+  }
 
 .container {
     background-color: rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-    padding: 20px;
-    /*detta?*/
-    margin: 10vh auto;
-    min-width: 800px;
-    width: 80vw;
+    border-radius: 2vh;
+    padding: 2vh;
 }
 
 .container h1 {
     font-family: "bungee Shade";
-    font-size: 83px;
+    font-size: 6vw;
     color: rgb(233, 230, 230);
 }
 
 nav ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1vh;
 
     list-style-type: none;
-    padding: 60px 0;
+    padding: 10vh 0;
 }
 
 nav li {
     background-color: rgba(255, 255, 255, 0.622);
     color: black;
     text-align: center;
-    font-size: 26px;
+    font-size: 2vw;
 
-
-    border-radius: 10px;
-    padding: 15px 0;
+    border-radius: 1vh;
+    padding: 2vh 0;
 }
 
 .hover:hover {
@@ -93,32 +92,28 @@ nav li {
 #pressed {
     border: 1px solid white;
     font-family: "barlow condensed";
+    box-shadow: 0 0 1vw rgba(255, 255, 255, 1);
 }
 
 main {
     background-color: rgba(0, 0, 0, 0.4);
     border: lightgray solid 1px;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 2vh;
+    padding: 1vw;
 }
 
 article {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-
-    display: flex;
-    justify-content: flex-end;
-    gap: 1vh;
+    grid-template-columns: 2fr 1fr;
+    gap: 1vw;
 }
 
 aside {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-    gap: 2vh;
-    padding-bottom: 1vh;
-    width: 40vw;
+    gap: 1vh;
+    width: 31vw;
 
     position: relative;
 }
@@ -126,23 +121,17 @@ aside {
 aside img {
     width: 100%;
     height: auto;
-    border-radius: 15px 15px 0 0;
-
-    transition: opacity 1s;
+    border-radius: 1vw 1vw 0 0;
 }
 
 aside img:nth-child(2) {
     position: absolute;
-    width: 29vw;
-    right: 0vw;
+    top: 0;
+    left: 0;
 
     object-fit: contain;
     opacity: 0;
-    transition: opacity 1s;
-}
-
-aside:hover img:nth-child(1) {
-    opacity: 0;
+    transition: 1s;
 }
 
 aside:hover img:nth-child(2) {
@@ -150,7 +139,6 @@ aside:hover img:nth-child(2) {
 }
 
 figure {
-    text-align: center;
     grid-column: 1 / span 2;
 }
 
@@ -159,7 +147,7 @@ figcaption {
     background-color: rgb(236, 215, 50);
     border-radius: 0 0 0 15px;
     padding: 2vh;
-    font-size: 14px;
+    font-size: 1vw;
 }
 
 aside figcaption + figcaption {
@@ -176,13 +164,13 @@ section {
 
 h2 {
     font-family: "bungee Outline";
-    font-size: 34px;
+    font-size: 3vw;
 }
 
 section h3 {
     font-family: "barlow condensed med";
-    font-size: 3vh;
-    margin-bottom: 55px;
+    font-size: 2vw;
+    margin-bottom: 8vh;
 }
 
 section ul {
@@ -197,9 +185,9 @@ ul, li {
     font-family: "barlow condensed light";
 }
 
-p {
+section p, section ul, section h4 {
     font-family: "barlow condensed light";
-    font-size: 2vh;
+    font-size: 1.3vw;
 }
 
 content {
@@ -208,13 +196,13 @@ content {
     grid-template-rows: 1fr;
     gap: 1vw;
     margin-top: 1vw;
-    height: 25vh;
 }
 
 content div {
     background-color:rgb(209, 97, 157);
-    color:  rgb(236, 215, 50);
-    padding: 40px 10px;
+    color: rgb(236, 215, 50);
+    font-size: 1vw;
+    padding: 2vw 1vw;
 
     display: flex;
     justify-content: center;
@@ -222,11 +210,11 @@ content div {
 }
 
 content div:nth-child(1) {
-    border-radius: 1vh 0 1vh 1vh;
+    border-radius: 2vh 0 1vh 1vh;
 }
 
 content div:nth-child(3) {
-    border-radius: 1vh 1vh 1vh 0;
+    border-radius: 2vh 2vh 2vh 0;
 }
 
 content div:nth-child(4) {
@@ -235,11 +223,11 @@ content div:nth-child(4) {
     background-size: cover;
 
     font-family: "barlow condensed light";
-    font-size: 18px;
+    font-size: 1vw;
     color: rgb(214, 214, 214);
-    padding: 1vw;
-    border-radius: 0 1vh 1vh 1vh;
+    border-radius: 0 2vh 2vh 2vh;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 1vw;
 
     display: flex;
     align-items: end;
@@ -247,7 +235,7 @@ content div:nth-child(4) {
 }
 
 content div:nth-child(5) {
-    border-radius: 1vh 1vh 0 1vh;
+    border-radius: 2vh 2vh 0 2vh;
 }
 
 .blue {
@@ -256,6 +244,7 @@ content div:nth-child(5) {
 }
 
 .wheat {
+    display: grid;
     grid-template-columns: 2fr 1fr 2fr 1fr;
 }
 
@@ -284,7 +273,7 @@ content div:nth-child(5) {
     color: rgb(214, 214, 214);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     font-family: "barlow condensed light";
-    font-size: 18px;
+    font-size: 1.2vw;
     padding: 2vh;
     border-radius: 0 10px 10px 10px;
 
@@ -298,6 +287,7 @@ content div:nth-child(5) {
     text-shadow: none;
     color:  rgb(72, 189, 215);
     border-radius: 10px 10px 0 10px;
+    font-family: "barlow semi condensed";
 
     display: flex;
     align-items: center;
@@ -307,4 +297,114 @@ content div:nth-child(5) {
 footer {
     color: white;
     margin-top: 8vh;
+    font-size: 2vh;
+}
+
+@media (max-width: 500px) {
+    
+    body {
+        background-image: url(images/jimi_hendrix_mobile.jpeg);
+        min-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100vw;
+        border-radius: 0;
+        box-sizing: border-box;
+    }
+
+    .container h1 {
+        font-size: 15vw;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    nav li {
+       font-size: 3vw;
+    }
+
+    main {
+        padding: 3vw;
+        height: 214vh;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1vw;
+    }
+
+    aside {
+        width: 80vw;
+        grid-row: 1 / span 2;
+        width: 100%;
+    }
+
+    figcaption {
+        font-size: 5vw;
+    }
+
+    figcaption h3 {
+        font-size: 5vw;
+    }
+    
+    ol {
+        padding-left: 3vw;
+    }
+
+    h2 {
+        font-size: 7vw;
+    }
+
+    section p, section ul, section h4 {
+        font-size: 4vw;
+    }
+
+    aside:hover img:nth-child(2) {
+        opacity: 0;
+    }
+
+    content {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    content div {
+        font-size: 3vw;
+        height: 25vh;
+    }
+
+    content div:nth-child(3) {
+        grid-column: 2 / 4;
+        grid-row: 1;
+    }
+
+    .wheat {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .wheat div:nth-child(1) {
+        grid-column: 1 / 3;
+    }
+
+    .wheat div:nth-child(3) {
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+
+    .wheat div:nth-child(4) {
+        font-size: 3vw;
+        height: 100%;
+        padding: 0 1vw;
+        font-family: "barlow semi condensed";
+
+        align-items: center;
+        justify-content: center;
+    }
 }
