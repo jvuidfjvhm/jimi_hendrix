@@ -129,7 +129,7 @@ aside img:nth-child(2) {
     transition: 1s;
 }
 
-aside:hover img:nth-child(2) {
+img:nth-child(2):hover {
     opacity: 1;
 }
 
