@@ -32,30 +32,24 @@
     font-family: "barlow semi condensed";
     margin: 0;
   }
-  
+
   body {
     background-image: url(images/jimi-hendrix.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     
-    margin: 5vw auto; 
-    padding: 0 2vw;
+    margin: 0 auto; 
+    padding: 5vw 2vw;
     box-sizing: border-box;
     max-width: 1200px; 
-  }
-  
-  @media (min-width: 800px) and (max-width: 900px) {
-    
-    body {
-      max-width: 800px;
-    }
   }
 
 .container {
     background-color: rgba(0, 0, 0, 0.35);
     border-radius: 2vh;
     padding: 2vh;
+
 }
 
 .container h1 {
@@ -300,6 +294,13 @@ footer {
     font-size: 2vh;
 }
 
+@media (min-width: 800px) and (max-width: 900px) {
+    
+    body {
+      max-width: 800px;
+    }
+  }
+
 @media (max-width: 500px) {
     
     body {
@@ -329,7 +330,6 @@ footer {
 
     main {
         padding: 3vw;
-        height: 214vh;
     }
 
     article {
@@ -361,6 +361,10 @@ footer {
         font-size: 7vw;
     }
 
+    section h3 {
+        font-size: 5vw;
+    }
+
     section p, section ul, section h4 {
         font-size: 4vw;
     }
@@ -377,11 +381,16 @@ footer {
     content div {
         font-size: 3vw;
         height: 25vh;
+        padding: 0 4vw;
     }
 
     content div:nth-child(3) {
         grid-column: 2 / 4;
         grid-row: 1;
+    }
+
+    content div:nth-child(4) {
+        font-size: 4vw;
     }
 
     .wheat {
@@ -394,6 +403,8 @@ footer {
     }
 
     .wheat div:nth-child(3) {
+        font-size: 4vw;
+
         grid-column: 1 / 3;
         grid-row: 2;
     }
