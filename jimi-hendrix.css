@@ -31,6 +31,7 @@
 * {
     font-family: "barlow semi condensed";
     margin: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -313,7 +314,6 @@ footer {
     .container {
         width: 100vw;
         border-radius: 0;
-        box-sizing: border-box;
     }
 
     .container h1 {
@@ -381,7 +381,7 @@ footer {
     content div {
         font-size: 3vw;
         height: 25vh;
-        padding: 0 4vw;
+        padding: 2vw 4vw;
     }
 
     content div:nth-child(3) {
@@ -414,6 +414,7 @@ footer {
         height: 100%;
         padding: 0 1vw;
         font-family: "barlow semi condensed";
+        padding: 2vw 4vw;
 
         align-items: center;
         justify-content: center;
